@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0423E6C528327D9300D35445 /* NetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0423E6C428327D9300D35445 /* NetManager.swift */; };
 		04E97B48282B5DC3000C14E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E97B47282B5DC3000C14E0 /* AppDelegate.swift */; };
 		04E97B4A282B5DC3000C14E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E97B49282B5DC3000C14E0 /* SceneDelegate.swift */; };
 		04E97B4C282B5DC3000C14E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E97B4B282B5DC3000C14E0 /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0423E6C428327D9300D35445 /* NetManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetManager.swift; sourceTree = "<group>"; };
 		04E97B44282B5DC3000C14E0 /* TestSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E97B47282B5DC3000C14E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04E97B49282B5DC3000C14E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				04E97B4F282B5DC6000C14E0 /* Preview Content */,
 				04E97B5C282B63EE000C14E0 /* FirstVC.swift */,
 				04E97B5F282B8BB0000C14E0 /* CustomPageVC.swift */,
+				0423E6C428327D9300D35445 /* NetManager.swift */,
 			);
 			path = TestSwiftUI;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E97B48282B5DC3000C14E0 /* AppDelegate.swift in Sources */,
+				0423E6C528327D9300D35445 /* NetManager.swift in Sources */,
 				04E97B60282B8BB0000C14E0 /* CustomPageVC.swift in Sources */,
 				04E97B5D282B63EE000C14E0 /* FirstVC.swift in Sources */,
 				04E97B4A282B5DC3000C14E0 /* SceneDelegate.swift in Sources */,
@@ -296,14 +300,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = S3EPGK8YRJ;
+				DEVELOPMENT_TEAM = 97DW55HLWV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TestSwiftUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lzqok.com.TestSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.migu.babyTree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,14 +321,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestSwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = S3EPGK8YRJ;
+				DEVELOPMENT_TEAM = 97DW55HLWV;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = TestSwiftUI/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = lzqok.com.TestSwiftUI;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.migu.babyTree;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

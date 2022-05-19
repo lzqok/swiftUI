@@ -30,6 +30,12 @@ class FirstVC: UIViewController {
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.topAnchor.constraint(equalTo: infoLabel.bottomAnchor).isActive = true
         btn.centerXAnchor.constraint(equalTo: infoLabel.centerXAnchor).isActive = true
+        
+        let names = ["names","lily","perig"]
+        for i in 0..<10 {
+            names[i]
+        }
+        
     }
     
     @objc func toSwiftUI() {

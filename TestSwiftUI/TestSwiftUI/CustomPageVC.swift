@@ -63,8 +63,21 @@ class CustomPageVC: UIViewController, UIPageViewControllerDataSource,UIPageViewC
         pageCtrl.translatesAutoresizingMaskIntoConstraints = false
         pageCtrl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         pageCtrl.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        
+        let backBtn = UIButton()
+        backBtn.setTitle("back", for: .normal)
+        backBtn.setTitleColor(UIColor.black, for: .normal)
+        backBtn.addTarget(self, action: #selector(backAction(_:)), for: .touchUpInside)
+        self.view.addSubview(backBtn)
+        backBtn.translatesAutoresizingMaskIntoConstraints = false
+        backBtn.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
+        backBtn.leadingAnchor.constraint(equalTo: self.view.leadingAnchor).isActive = true
+        
     }
     
+    @objc func backAction(_ sender:UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
         if let index = viewCtrls.firstIndex(of: viewController) {

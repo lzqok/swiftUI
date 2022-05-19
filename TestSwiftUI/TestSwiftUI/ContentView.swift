@@ -7,22 +7,47 @@
 
 import SwiftUI
 import MapKit
+import Combine
 
 struct ContentView: View {
-    @Published
-    @State private var showingImagePicker = false
+    
+    @ObservedObject var viewModel = PeopleViewModel()
+   
+    @State private var active = false
     var body: some View {
-        VStack {
-            Text("Hello, world!").font(.title).foregroundColor(.red)
-                .padding()
-            Button("Select Image"){
-                self.showingImagePicker = true
-            }.sheet(isPresented: $showingImagePicker, content: {
-                FirstVCUI(text: "VCTITLE")
-            })
-            MapView()
+        List(viewModel.peopleList){  people in
+            VStack {
+                Button(people.name_cn){
+                    active = true
+                }.fullScreenCover(isPresented: $active, content: {
+                    FirstVCUI(text: people.name_cn)
+                }).font(.body).foregroundColor(.blue).padding()
+                
+            }
         }
-        
+    }
+    
+//    @State private var showingImagePicker = false
+//    var body: some View {
+//        VStack {
+//            Text("Hello, world!").font(.title).foregroundColor(.red)
+//                .padding()
+//            Button("Select Image"){
+//                self.showingImagePicker = true
+//            }.sheet(isPresented: $showingImagePicker, content: {
+//                FirstVCUI(text: "VCTITLE")
+//            })
+//            MapView()
+//        }
+//
+//    }
+    
+    func nextVC(_ title:String) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController =  UIHostingController(rootView: FirstVCUI(text: title))
+            window.makeKeyAndVisible()
+        }
+       
     }
 }
 
