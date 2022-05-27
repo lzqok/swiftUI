@@ -14,17 +14,26 @@ struct ContentView: View {
     @ObservedObject var viewModel = PeopleViewModel()
    
     @State private var active = false
+    @State private var nextActive = false
     var body: some View {
-        List(viewModel.peopleList){  people in
-            VStack {
-                Button(people.name_cn){
-                    active = true
-                }.fullScreenCover(isPresented: $active, content: {
-                    FirstVCUI(text: people.name_cn)
-                }).font(.body).foregroundColor(.blue).padding()
-                
+        NavigationView {
+            List(viewModel.peopleList){  people in
+                VStack {
+//                    Button(people.name_cn){
+//                        active = true
+//                    }.fullScreenCover(isPresented: $active, content: {
+//                        FirstVCUI(text: people.name_cn)
+//                    }).font(.body).foregroundColor(.blue).padding()
+                    
+                    Button("next"){
+                        nextActive = true
+                    }.fullScreenCover(isPresented: $nextActive) {
+                        GridView()
+                    }
+                }
             }
-        }
+        }.navigationTitle("title")
+        
     }
     
 //    @State private var showingImagePicker = false
